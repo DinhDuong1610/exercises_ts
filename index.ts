@@ -105,16 +105,19 @@ const divice = function(a: number, b:number) {
 
 // BT10
 interface Shape {
-    area(): string;
+    area(): number;
 }
 
 class Circle implements Shape {
-    area():string {
-        return 'Circle';
+    private r: number;
+    area():number {
+        return 3.14 * this.r * this.r;
     }
 }
 class Rectangle implements Shape {
-    area():string {
-        return 'Reactangle';
+    private w: number;
+    private h: number;
+    area():number {
+        return this.w * this.h;
     }
 }
